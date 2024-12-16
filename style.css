@@ -6,9 +6,14 @@
 
 :root {
   font-size: 62.5%;
+  --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  --default-border-radios: 1.2rem;
 }
 
 body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 1.4rem;
 }
@@ -19,8 +24,7 @@ body {
     ". . . . . ."
     ". hero . form . ."
     ". hero . form . ."
-    ". . . . . ."
-  ;
+    ". . . . . .";
   gap: 8rem;
 }
 
@@ -49,9 +53,10 @@ main h2 span {
 main {
   width: 60rem;
   height: 52rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  border: var(--default-border);
   padding: 4.4rem 5.7rem;
-  border-radius: 1.2rem;
+  border-radius: var(--default-border-radios);
+  position: relative;
 }
 
 main h2 {
@@ -66,7 +71,7 @@ main .actions {
 }
 
 main .actions a {
-  border-radius: 1.2rem;
+  border-radius: var(--default-border-radios);
   text-decoration: none;
   font-size: 2.4rem;
   height: 5.5rem;
@@ -84,6 +89,17 @@ main .actions a+a {
   margin-top: 4.8rem;
 }
 
+main header {
+  display: flex;
+  align-items: center;
+  gap: 0 1.8rem;
+}
+
+main header i {
+  color: #ff5678;
+  font-size: 2rem;
+}
+
 main footer p {
   font-size: 1.6rem;
   margin-top: 8rem;
@@ -95,4 +111,76 @@ main footer a {
   display: block;
   text-align: center;
   color: #000;
+}
+
+main form {
+  margin-top: 1.6rem;
+}
+
+main form label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+main form :is(input, select) {
+  width: 489px;
+  height: 5.5rem;
+  background: #ffffff;
+  border-radius: var(--default-border-radios);
+  border: var(--default-border);
+  display: block;
+}
+
+main form select {
+  appearance: none;
+}
+
+main form .select-div {
+  position: relative;
+}
+
+main form .select-div::after {
+  top: 1.6rem;
+  right: 1.6rem;
+  font-size: 2.2rem;
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+  color: #35e6e9;
+}
+
+.points .input-group {
+  display: flex;
+  align-items: center;
+}
+
+.points .input-group input {
+  flex: 1;
+  height: 5.5rem;
+  border-radius: var(--default-border-radios) 0 0 var(--default-border-radios);
+  border: var(--default-border);
+  padding: 0 1rem;
+  border-right: none;
+}
+
+.points .input-group button {
+  height: 5.5rem;
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: var(--default-border);
+  border-left: none;
+  border-radius: 0 var(--default-border-radios) var(--default-border-radios) 0;
+  cursor: pointer;
+  color: #35e6e9;
+}
+
+.points .input-group button i {
+  font-size: 1.8rem;
 }
