@@ -92,6 +92,8 @@ main .actions a+a {
 main header {
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
   gap: 0 1.8rem;
 }
 
@@ -103,6 +105,7 @@ main header i {
 main footer p {
   font-size: 1.6rem;
   margin-top: 8rem;
+  text-align: center;
 }
 
 main footer a {
@@ -183,4 +186,43 @@ main form .select-div::after {
 
 .points .input-group button i {
   font-size: 1.8rem;
+}
+
+main .actions a:hover {
+  background-color: #30c3c4;
+}
+
+main .actions a+a:hover {
+  background-color: #e04d6a;
+}
+
+.points .input-group button:hover {
+  background-color: #e0f7f9;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    grid-template-areas:
+      "hero"
+      "form";
+    gap: 4rem;
+  }
+
+  aside {
+    text-align: center;
+  }
+
+  main {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  main .actions a {
+    font-size: 1.6rem;
+    height: 4.5rem;
+  }
 }
