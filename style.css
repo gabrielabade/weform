@@ -11,11 +11,17 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 1.4rem;
+  background-color: #f7f7f7;
+  overflow-x: hidden;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100vw;
 }
 
 .content {
@@ -26,75 +32,89 @@ body {
     ". hero . form . ."
     ". . . . . .";
   gap: 8rem;
+  max-width: 120rem;
+  width: 100%;
 }
 
 main {
   grid-area: form;
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+  border: var(--default-border);
+  padding: 4.4rem 5.7rem;
+  border-radius: var(--default-border-radios);
+  background-color: #fff;
+  position: relative;
 }
 
 aside {
   grid-area: hero;
-  justify-content: center;
   text-align: center;
   align-items: center;
 }
 
+aside img {
+  max-width: 100%;
+  height: auto;
+}
+
 aside h1 {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 500;
-  line-height: 75px;
+  line-height: 1.2;
 }
 
 aside h1 span,
 main h2 span {
-  color: #ff5678
-}
-
-main {
-  width: 60rem;
-  height: 52rem;
-  border: var(--default-border);
-  padding: 4.4rem 5.7rem;
-  border-radius: var(--default-border-radios);
-  position: relative;
+  color: #ff5678;
 }
 
 main h2 {
   max-width: 43rem;
   font-size: 3.6rem;
   font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
 }
+
+
+.shared-main {
+  width: 45rem;
+  max-width: 45rem;
+  height: auto;
+  padding: 4rem 2rem;
+}
+
 
 main .actions {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 main .actions a {
   border-radius: var(--default-border-radios);
   text-decoration: none;
-  font-size: 2.4rem;
-  height: 5.5rem;
+  font-size: 1.8rem;
+  height: 4.5rem;
   background-color: #35e6e9;
   color: #fff;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5.4rem;
 }
 
 main .actions a+a {
   background-color: #ff5678;
-  margin-top: 4.8rem;
 }
 
 main header {
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  gap: 0 1.8rem;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 main header i {
@@ -104,7 +124,6 @@ main header i {
 
 main footer p {
   font-size: 1.6rem;
-  margin-top: 8rem;
   text-align: center;
 }
 
@@ -117,22 +136,24 @@ main footer a {
 }
 
 main form {
-  margin-top: 1.6rem;
+  margin-top: 2rem;
 }
 
 main form label {
   font-size: 1.8rem;
-  font-weight: 400;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   display: block;
 }
 
 main form :is(input, select) {
-  width: 489px;
-  height: 5.5rem;
+  width: 100%;
+  max-width: 48.9rem;
+  height: 4.5rem;
   background: #ffffff;
   border-radius: var(--default-border-radios);
   border: var(--default-border);
+  padding: 0 1rem;
   display: block;
 }
 
@@ -152,18 +173,18 @@ main form .select-div::after {
   font-family: 'Font Awesome 6 Free';
   font-weight: 600;
   position: absolute;
-  z-index: 1;
   color: #35e6e9;
 }
 
 .points .input-group {
   display: flex;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .points .input-group input {
   flex: 1;
-  height: 5.5rem;
+  height: 4.5rem;
   border-radius: var(--default-border-radios) 0 0 var(--default-border-radios);
   border: var(--default-border);
   padding: 0 1rem;
@@ -171,8 +192,8 @@ main form .select-div::after {
 }
 
 .points .input-group button {
-  height: 5.5rem;
-  width: 5.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,45 +205,46 @@ main form .select-div::after {
   color: #35e6e9;
 }
 
-.points .input-group button i {
-  font-size: 1.8rem;
-}
-
-main .actions a:hover {
-  background-color: #30c3c4;
-}
-
-main .actions a+a:hover {
-  background-color: #e04d6a;
-}
-
 .points .input-group button:hover {
   background-color: #e0f7f9;
 }
 
+footer {
+  margin-top: 3rem;
+}
+
 @media (max-width: 768px) {
+  :root {
+    font-size: 60%;
+  }
+
   body {
-    font-size: 1.2rem;
+    padding: 1.5rem;
   }
 
   .content {
     grid-template-areas:
       "hero"
       "form";
-    gap: 4rem;
-  }
-
-  aside {
-    text-align: center;
+    gap: 2rem;
   }
 
   main {
-    width: 90%;
-    padding: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  aside h1 {
+    font-size: 3rem;
   }
 
   main .actions a {
     font-size: 1.6rem;
     height: 4.5rem;
+  }
+
+  .shared-main {
+    width: 95vw;
+    height: auto;
+    padding: 2rem 2rem;
   }
 }
