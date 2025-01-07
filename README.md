@@ -1,12 +1,6 @@
 # WeForm
 
-WeForm é uma plataforma que conecta entidades e parceiros em um ambiente colaborativo, facilitando o cadastro e a organização de informações de instituições que desejam oferecer ou receber apoio em diversos campos de atuação.
-
----
-
-## 📄 Descrição do Projeto
-
-A landing page foi criada para ser a porta de entrada do **WeForm**, apresentando a proposta da plataforma de forma clara e objetiva. Ela permite que os usuários realizem ações como cadastrar novas entidades, visualizar as já cadastradas e adicionar novos campos de atuação.
+WeForm é uma landing page inovadora que conecta entidades e parceiros, apresentando a proposta da plataforma de forma clara e objetiva. Através de uma interface intuitiva, facilita o cadastro e a organização de informações de instituições que desejam oferecer ou receber apoio. Os usuários podem realizar diversas ações, como cadastrar novas entidades, visualizar as já cadastradas e adicionar novos campos de atuação, promovendo uma gestão eficiente e colaborativa.
 
 ---
 
